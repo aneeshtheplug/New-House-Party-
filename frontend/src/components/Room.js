@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Grid, Button, Typography} from '@material-ui/core';
 import CreateRoomPage from "./CreateRoomPage"
 import MusicPlayer from './MusicPlayer';
+import "./Room.css";
 
 export default class Room extends Component{
     constructor(props){
@@ -102,60 +103,69 @@ export default class Room extends Component{
         });
     }
 
-    renderSettings(){
+    renderSettings() {
         return (
-        <Grid container spacing = {1}>
-            <Grid item xs = {12} align = "center">
-                <CreateRoomPage 
-                update = {true} 
-                votesToSkip = {this.state.votesToSkip} 
-                guestCanPause = {this.state.guestCanPause} 
-                roomCode = {this.roomCode}
-                updateCallback = {this.getRoomDetails}
-                />
-            </Grid> 
-            <Grid item xs = {12} align = "center">
-                <Button 
-                variant = "contained" 
-                color = "secondary" 
-                onClick={() => this.updateShowSettings(false)}>
-                    Close
-                </Button>
-            </Grid> 
-        </Grid>
+            <Grid container spacing={1}>
+                <Grid item xs={12} align="center">
+                    <CreateRoomPage
+                        update={true}
+                        votesToSkip={this.state.votesToSkip}
+                        guestCanPause={this.state.guestCanPause}
+                        roomCode={this.roomCode}
+                        updateCallback={this.getRoomDetails}
+                    />
+                </Grid>
+                <Grid item xs={12} align="center">
+                    <Button
+                        className="btn"
+                        onClick={() => this.updateShowSettings(false)}
+                    >
+                        Close
+                    </Button>
+                </Grid>
+            </Grid>
         );
-    }
+    }    
 
-    renderSettingsButton(){
+
+    renderSettingsButton() {
         return (
-            <Grid item xs = {12} align = "center">
-                <Button variant = "contained" color = "primary" onClick={() => this.updateShowSettings(true)}>
+            <Grid item xs={12} align="center">
+                <Button
+                    className="btn"
+                    onClick={() => this.updateShowSettings(true)}
+                >
                     Settings
                 </Button>
             </Grid>
         );
     }
-
-    render(){
-        if (this.state.showSettings){
+    
+    
+    
+    render() {
+        if (this.state.showSettings) {
             return this.renderSettings();
         }
-        return ( 
-            <Grid container spacing = {1}>
-                <Grid item xs = {12} align = "center">
-                    <Typography variant = "h4" component = "h4">
+        return (
+            <Grid container spacing={1}>
+                <Grid item xs={12} align="center">
+                    <Typography variant="h4" component="h4">
                         Code: {this.roomCode}
                     </Typography>
                 </Grid>
-                <MusicPlayer {...this.state.song} />
+                <MusicPlayer {...this.state.song} className="music-player" />
                 {this.state.isHost ? this.renderSettingsButton() : null}
-                <Grid item xs = {12} align = "center">
-                    <Button variant = "contained" color = "secondary" onClick = {this.leaveButtonPressed}>
+                <Grid item xs={12} align="center">
+                    <Button
+                        className="btn"
+                        onClick={this.leaveButtonPressed}
+                    >
                         Leave Room
                     </Button>
                 </Grid>
             </Grid>
-
         );
-    }
+    }    
+    
 }

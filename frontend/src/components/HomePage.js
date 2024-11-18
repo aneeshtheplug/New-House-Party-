@@ -4,6 +4,7 @@ import CreateRoomPage from "./CreateRoomPage";
 import { BrowserRouter as Router, Route, Link, Redirect} from "react-router-dom";
 import { Switch } from 'react-router-dom';
 import Room from "./Room";
+import "./HomePage.css";
 
 import {Grid, Button, ButtonGroup, Typography} from '@material-ui/core'
 
@@ -29,23 +30,14 @@ export default class HomePage extends Component{
 
     renderHomePage(){
         return (
-        <Grid container spacing = {3}>
-            <Grid item xs = {12} align = "center">
-                <Typography variant = "h3" compact = "h3">
-                    House Party
-                </Typography>
-            </Grid>
-            <Grid item xs = {12} align = "center">
-                <ButtonGroup disableElevation variant = "contained" color = "primary">
-                    <Button color = "primary" to = '/join' component = {Link}>
-                        Join a Room
-                    </Button>  
-                    <Button color = "secondary" to = '/create' component = {Link}>
-                        Create a Room
-                    </Button>              
-                </ButtonGroup>
-            </Grid>
-        </Grid>
+        <div className="main-container">
+            <h1>House Party</h1>
+            <p>Welcome to the ultimate party experience! Join a room or create your own to get started.</p>
+            <div className="button-group">
+                <Link to='/join' className="btn">Join a Room</Link>  
+                <Link to='/create' className="btn">Create a Room</Link>              
+            </div>
+        </div>
         );
     }
 

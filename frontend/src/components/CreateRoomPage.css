@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea); /* Light gradient background */
+    color: #333; /* Neutral text color */
+}
+
+/* Main Container */
+.room-container {
+    max-width: 700px; /* Wider container for spacious layout */
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95); /* Subtle white overlay */
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    text-align: center;
+}
+
+/* Title Styling */
+.room-container h4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4b4b4b; /* Neutral dark color */
+    letter-spacing: 1px;
+}
+
+.room-container .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666; /* Softer neutral color */
+}
+
+/* Radio Button Group */
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.radio-group label {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 30px;
+}
+
+.input-group input[type="number"] {
+    width: 100px; /* Slightly wider for a balanced look */
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.input-group input[type="number"]:focus {
+    border-color: #ffafbd;
+    box-shadow: 0 0 5px rgba(255, 175, 189, 0.5);
+}
+
+.input-group .subtitle {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Buttons Styling */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.button-group .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0); /* Warm pastel gradient */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-group .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button-group .btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .room-container {
+        padding: 20px;
+    }
+
+    .room-container h4 {
+        font-size: 2rem;
+    }
+
+    .button-group .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .radio-group {
+        flex-direction: column; /* Stack radio buttons on smaller screens */
+        gap: 15px;
+    }
+}

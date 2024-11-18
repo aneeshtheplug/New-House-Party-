@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea); /* Light gradient background */
+    color: #333; /* Neutral text color */
+}
+
+/* Main Container */
+.room-join-container {
+    max-width: 600px; /* Adjusted for a more compact form layout */
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95); /* Subtle white overlay */
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    text-align: center;
+}
+
+/* Title Styling */
+.room-join-container h4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #4b4b4b; /* Neutral dark color */
+    letter-spacing: 1px;
+}
+
+/* TextField Styling */
+.room-join-container .MuiOutlinedInput-root {
+    background: rgba(245, 245, 245, 1); /* Light gray background for input */
+    border-radius: 5px;
+}
+
+.room-join-container .MuiInputLabel-outlined {
+    color: #666; /* Softer neutral label color */
+}
+
+.room-join-container .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #ffafbd; /* Match pastel gradient focus */
+    box-shadow: 0 0 5px rgba(255, 175, 189, 0.5);
+}
+
+/* Helper Text Styling */
+.room-join-container .MuiFormHelperText-root {
+    color: #f44336; /* Red for error messages */
+    font-size: 0.9rem;
+}
+
+/* Button Styling */
+.room-join-container .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0); /* Warm pastel gradient */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px 0; /* Space between buttons */
+}
+
+/* Hover and Active States for Buttons */
+.room-join-container .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.room-join-container .btn:active {
+    transform: translateY(1px);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .room-join-container {
+        padding: 20px;
+    }
+
+    .room-join-container h4 {
+        font-size: 2rem;
+    }
+
+    .room-join-container .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}

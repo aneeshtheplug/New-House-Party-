@@ -1,0 +1,87 @@
+/* General Styles for Room Page */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea); /* Light gradient background */
+    color: #333; /* Neutral text color */
+}
+
+/* Main Container */
+.room-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95); /* Subtle white overlay */
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+/* Typography Styling */
+.room-container h4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4b4b4b; /* Neutral dark color */
+    letter-spacing: 1px;
+}
+
+.room-container .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666; /* Softer neutral color */
+}
+
+/* Button Styling */
+/* Button Styling */
+.btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white !important; /* Ensures text is white, even if overridden */
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0); /* Warm pastel gradient */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Hover and Active States for Buttons */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Music Player */
+.music-player {
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(240, 240, 240, 0.9); /* Light gray background for the player */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .room-container {
+        padding: 20px;
+    }
+
+    .room-container h4 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
